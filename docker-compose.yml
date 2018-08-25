@@ -7,9 +7,10 @@ services:
     build:
       context: ./nginx
     volumes:
-      - /home/namtt/Projects/sod/sod-store-frontend/dist/store:/var/www/sod-store-frontend/dist/store
-      - /home/namtt/Projects/sod/sod-store-frontend/dist/cast:/var/www/sod-store-frontend/dist/cast
-      - /home/namtt/Projects/sod/sod-store-frontend/dist/admin:/var/www/sod-store-frontend/dist/admin
+      - ./www/sod-store:/var/www/sod-store
+      - ./www/sod-cast:/var/www/sod-cast
+      - ./www/sod-admin:/var/www/sod-admin
+      - ./www/mytel:/var/www/mytel
       - ./nginx/logs/:/var/log/nginx
       - ./nginx/sites:/etc/nginx/sites-available
       - ./nginx/h5bp:/etc/nginx/h5bp
